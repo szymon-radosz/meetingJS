@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/datepicker.css">
 
     <!-- jquery
  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -39,7 +40,7 @@
         <form id="myForm">
             <div class="form-group">
                 <label>Data spotkania</label>
-                <input type="text" class="form-control" id="meetingDate" placeholder="data spotkania">
+                <input  type="text" placeholder="data spotkania"  id="meetingDate">
             </div>
             <div class="form-group">
                 <label>Osoba</label>
@@ -50,8 +51,13 @@
                 <input type="text" class="form-control" id="meetingPurpose" placeholder="cel spotkania">
             </div>
             <div class="form-group">
-                <label>Ważne/ Średnio ważne/ Mało ważne</label>
-                <input type="text" class="form-control" id="meetingWarning" placeholder="cel spotkania">
+                <label>Ważne...</label>
+                <select class="form-control selectpicker" id="meetingWarning">
+                    <option>Ważne</option>
+                    <option>Średnio ważne</option>
+                    <option>Mało ważne</option>
+                </select>
+
             </div>
             <button type="submit" class="btn btn-default">Dodaj spotkanie</button>
         </form>
@@ -70,5 +76,16 @@
 
 </div> <!-- /container -->
 <script src="js/main.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script type="text/javascript">
+    // When the document is ready
+    $(document).ready(function () {
+
+        $('#meetingDate').datepicker({
+            format: "dd/mm/yyyy"
+        });
+
+    });
+</script>
 </body>
 </html>
