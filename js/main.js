@@ -75,12 +75,26 @@ function fetchMeetings(){
         var purpose = meetings[i].purpose;
         var warning = meetings[i].warning;
 
-        meetingsResults.innerHTML += '<div class="well">'+
+        meetingsResults.innerHTML += '<div class="mettingDiv">'+
             '<h3>'+date+'</h3>'+
             '<h3>'+person+'</h3>' +
             '<h3>'+purpose+'</h3>'+
-            '<h3>'+warning+'</h3>'+
+            '<h3 class="importance">'+warning+'</h3>'+
             ' <a onclick="deleteMeeting(\''+purpose+'\')" class="btn btn-danger" href="#">Delete</a> ' +
             '</div>';
     }
+
+    var content= document.getElementsByClassName("importance").innerHTML;
+
+    if(content == 'Mało ważne'){
+        ('.spotkanie').css('background-color', '#C0C0C0');
+    }
+    else if(content == 'Średnio ważne'){
+       ('.spotkanie').css('background-color', '#000');
+    }
+    else if(content == 'Ważne'){
+        ('.spotkanie').css('background-color', '#fff');
+    }
 }
+
+
