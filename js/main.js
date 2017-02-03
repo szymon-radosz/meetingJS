@@ -62,9 +62,7 @@ function deleteMeeting(purpose){
 
 // Fetch bookmarks
 function fetchMeetings(){
-    // Get meetings from localStorage
     var meetings = JSON.parse(localStorage.getItem('meetings'));
-    // Get output id
     var meetingsResults = document.getElementById('meetingsResults');
 
     // Build output
@@ -86,14 +84,14 @@ function fetchMeetings(){
 
     var content= document.getElementsByClassName("importance").innerHTML;
 
-    if(content == 'Mało ważne'){
-        ('.spotkanie').css('background-color', '#C0C0C0');
+    if(content == 'Important'){
+        $('.mettingDiv').css('background-color', '#c00100');
     }
-    else if(content == 'Średnio ważne'){
-       ('.spotkanie').css('background-color', '#000');
+    else if(content == 'Medium'){
+        $('.mettingDiv').css('background-color', '#fbff30');
     }
-    else if(content == 'Ważne'){
-        ('.spotkanie').css('background-color', '#fff');
+    else if(content == 'No important'){
+        $('.mettingDiv').css('background-color', '#85ff63');
     }
 }
 
