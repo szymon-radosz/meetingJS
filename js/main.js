@@ -73,11 +73,12 @@ function fetchMeetings(){
         var purpose = meetings[i].purpose;
         var warning = meetings[i].warning;
 
-        meetingsResults.innerHTML += '<div class="mettingDiv ' + warning + '">'+
-            '<h3>'+date+'</h3>'+
-            '<h3>'+person+'</h3>' +
-            '<h3>'+purpose+'</h3>'+
-            '<h3 class="importance">'+warning+'</h3>'+
+
+        meetingsResults.innerHTML += '<div class="col-sm-12 mettingDiv ' + warning + '">'+
+            '<h3>Date: '+date+'</h3>'+
+            '<h3>Person: '+person+'</h3>' +
+            '<h3>Purpose: '+purpose+'</h3>'+
+            '<h3 class="importance">Importance: '+warning+'</h3>'+
             ' <a onclick="deleteMeeting(\''+purpose+'\')" class="btn btn-danger" href="#">Delete</a> ' +
             '</div>';
     }

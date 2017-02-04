@@ -35,32 +35,45 @@
 <body onload="fetchMeetings()">
 
 <div class="container">
+        <div class="row header">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h1>MeetingJS</h1>
+                <p>App to manage your nearest meetings wrote in pure JS</p>
+            </div>
+        </div>
 
-    <div class="jumbotron">
-        <form id="myForm">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="date"  id="meetingDate">
+        <div class="row add">
+            <div class="col-sm-12 col-xs-12">
+                <form id="myForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="date"  id="meetingDate">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="meetingPerson" placeholder="person">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="meetingPurpose" placeholder="purpose">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control selectpicker" id="meetingWarning">
+                            <option>Important</option>
+                            <option>Medium</option>
+                            <option>No important</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-4 buttonDiv">
+                        <button type="submit" class="btn btn-default addButton">Add meeting</button>
+                    </div>
+
+                </form>
             </div>
-            <div class="form-group">
-                <input type="text" class="form-control" id="meetingPerson" placeholder="person">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" id="meetingPurpose" placeholder="purpose">
-            </div>
-            <div class="form-group">
-                <select class="form-control selectpicker" id="meetingWarning">
-                    <option>Important</option>
-                    <option>Medium</option>
-                    <option>No important</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-default">Add meeting</button>
-        </form>
-    </div>
+        </div>
 
     <div class="row marketing">
-        <h3>Meetings</h3>
-        <div id="meetingsResults"></div>
+        <h2>Meetings</h2>
+        <div class="row meetingList">
+            <div id="meetingsResults"></div>
+        </div>
     </div>
 
 </div> <!-- /container -->

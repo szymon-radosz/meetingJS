@@ -1,9 +1,53 @@
-.Important{
-    background-color: #ff9371;
-}
-.No.important{
-   background-color: rgba(6, 128, 7, 0.36);
-}
-.Medium{
-    background-color: #f8ff77;
-}
+body {
+  font-size: 62.5%; }
+
+.container .header {
+  text-align: center;
+  padding: 5em 0 8em 0; }
+  .container .header h1 {
+    font-size: 10em;
+    color: #666666; }
+  .container .header p {
+    font-size: 3em;
+    color: rgba(102, 102, 102, 0.34); }
+.container .add {
+  background-color: rgba(158, 158, 158, 0.16);
+  margin: 0 10em 10em 10em;
+  border-radius: 3em; }
+  .container .add #myForm {
+    padding: 10em; }
+    .container .add #myForm .buttonDiv {
+      text-align: center; }
+      .container .add #myForm .buttonDiv .addButton {
+        border-radius: 2em; }
+.container .marketing h2 {
+  text-align: center;
+  font-size: 7em;
+  color: #666666; }
+.container .marketing .meetingList {
+  margin: 0 12em; }
+  .container .marketing .meetingList .mettingDiv {
+    text-align: center;
+    padding: 3em 0;
+    width: 100%;
+    margin: 3em 0;
+    border-radius: 3em; }
+    .container .marketing .meetingList .mettingDiv .btn-danger {
+      border-radius: 2em;
+      margin: 1em 0; }
+  .container .marketing .meetingList .Important {
+    background-color: #ffb9a0; }
+  .container .marketing .meetingList .No.important {
+    background-color: #bdffa3; }
+  .container .marketing .meetingList .Medium {
+    background-color: #f5fb99; }
+
+@media only screen and (max-width: 520px) {
+  .container .add {
+    margin: 0 3em 3em 3em; }
+    .container .add #myForm {
+      padding: 3em; }
+  .container .marketing .meetingList {
+    margin: 0 5em; } }
+
+/*# sourceMappingURL=style.css.map */
